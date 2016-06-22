@@ -15,7 +15,8 @@ new Vue({
 		inch: '',
 		lbs: '',
 		ActLevel: '',
-		age: ''
+		age: '',
+
 //    public centimeters: number;
 //    public weight: number;
 //    public ActivityLevel: number;
@@ -71,7 +72,7 @@ new Vue({
 
         if(this.sex === "Female"){
 
-            console.log(cm);
+
 
             cal =  10 * (this.lbs * .453592) + 6.25 * cm - 5 * this.age - 161 * act;
             cal = cal * act;
@@ -83,12 +84,147 @@ new Vue({
         }
 
         if(cal > 1000)
-            return Math.round(cal) + " calories";
+            return Math.round(cal) ;
+        },
+
+        vaRec: function(){
+
+        if(this.sex === "Male"){
+
+        return 1500;
+
+        }
+
+        if(this.sex === "Female"){
+
+        return 1220;
+
         }
 
 
+        },
+
+        vcRec: function(){
+
+        if(this.sex === "Male"){
+
+        return 220;
+
+        }
+
+        if(this.sex === "Female"){
+
+        return 190;
+
         }
 
 
+        },
 
-    })
+        sodiumRec: function(){return 1600;},
+
+        veRec: function(){
+
+        if(this.sex === "Male"){
+
+        return 19;
+
+        }
+
+        if(this.sex === "Female"){
+
+        return 14;
+
+        }
+
+
+        },
+
+        waterRec: function(){
+
+        if(this.sex === "Male"){
+
+        return 13;
+
+        }
+
+        if(this.sex === "Female"){
+
+        return 9;
+
+        }
+
+
+        },
+
+        fiberRec: function(){
+
+        if(this.sex === "Male"){
+
+        return 38;
+
+        }
+
+        if(this.sex === "Female"){
+
+        return 28;
+
+        }
+},
+
+        fatRec: function(){
+
+
+
+            return Math.round( parseInt(this.cal) * .25 / 9);
+
+        },
+
+
+
+        proteinRec: function(){
+
+        return Math.round( (parseInt(this.cal) * .20 ) / 4);
+
+        },
+
+
+        waterRec: function(){
+
+        if(this.sex === "Male"){
+
+        return 13;
+
+        }
+
+        if(this.sex === "Female"){
+
+        return 9;
+
+        }
+
+        },
+
+        waterRec: function(){
+
+        if(this.sex === "Male"){
+
+        return 13;
+
+        }
+
+        if(this.sex === "Female"){
+
+        return 9;
+
+        }
+
+
+},
+        sugarRec: function(){
+
+        return ( parseInt( this.cal) * .05) / 4;
+
+        }
+
+    }})

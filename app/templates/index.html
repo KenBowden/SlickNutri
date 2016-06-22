@@ -62,10 +62,17 @@
 
             </div>
             <div class="col-xs-8 center-block">
-                <h1 v-if="cal">
-                    <center>Recommended</center>
-                    <center> {{cal}}</center>
+                <h1>
+                    <center>Recommended:</center>
                 </h1>
+                <div class="jumbotron well" style="background-color: #00b200;">
+
+                    <h1>
+
+                        <center v-text="cal" >use the watch in vue.js to do animation</center>
+                    </h1>
+                </div>
+
 
             </div>
             <div class="col-xs-2">
@@ -83,7 +90,7 @@
 
     <div style="margin-top:48px" class="container">
 
-        <table class="table">
+        <table class="table table-condensed table-hover">
             <tr>
                 <td> Nutrient</td>
                 <td>You</td>
@@ -189,7 +196,7 @@
                 <td>{{vaGlobal}}</td>
 
             </tr>
-                        <tr>
+            <tr>
                 <td>Vitamin E</td>
                 <td>
 
@@ -229,7 +236,6 @@
                 <td>{{sodiumGlobal}}</td>
 
             </tr>
-
 
 
         </table>
